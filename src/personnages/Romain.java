@@ -46,21 +46,23 @@ public class Romain {
 			if (equipement.equals(equipements[0])) {
 				System.out.println(debutPhrase + nom + " possède déjà un " + equipement + " !");
 			} else {
-				equipements[nbEquipement] = equipement;
-				nbEquipement += 1;
-				System.out.println(debutPhrase + nom + " s'équipe avec un " + equipement + ".");
+				equiperEquipement(equipement, debutPhrase);
 			}
 			break;
 		}
 		case 0: {
-			equipements[nbEquipement] = equipement;
-			nbEquipement += 1;
-			System.out.println(debutPhrase + nom + " s'équipe avec un " + equipement + ".");
+			equiperEquipement(equipement, debutPhrase);
 			break;
 		}
 		default:
 			System.out.println(debutPhrase + nom + " est déjà bien protégé !");
 		}
+	}
+
+	private void equiperEquipement(Equipement equipement, String debutPhrase) {
+		equipements[nbEquipement] = equipement;
+		nbEquipement++;
+		System.out.println(debutPhrase + nom + " s'équipe avec un " + equipement + ".");
 	}
 	
 	private boolean isInvariantVerified() {
