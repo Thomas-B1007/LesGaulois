@@ -22,12 +22,15 @@ public class Romain {
 	}
 
 	public void recevoirCoup(int forceCoup) {
+		assert (forceCoup <= 0);
+		int temp = force;
 		force = force - forceCoup;
 		if (force <= 0) {
 			parler("J'abandonne !");
 		} else {
 			parler("Aïe !");
 		}
+		assert (temp > force);
 	}
 	
 	private boolean isInvariantVerified() {
