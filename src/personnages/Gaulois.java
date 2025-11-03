@@ -54,13 +54,14 @@ public class Gaulois {
 	}
 
 	public void sePresenter() {
+		String debutPhrase = "Bonjour, je m'appelle ";
 		if (village == null) {
-			parler("Bonjour, je m'appelle " + nom + ". Je voyage de villages en villages.");
+			parler(debutPhrase + nom + ". Je voyage de villages en villages.");
 		} else {
 			if (village.getChef() == this) {
-				parler("Bonjour, je m'appelle " + nom + ". Je suis le chef du village " + village.getNom() + ".");
+				parler(debutPhrase + nom + ". Je suis le chef du village " + village.getNom() + ".");
 			} else {
-				parler("Bonjour, je m'appelle " + nom + ". J'habite au village " + village.getNom() + ".");
+				parler(debutPhrase + nom + ". J'habite au village " + village.getNom() + ".");
 			}
 		}
 	}
