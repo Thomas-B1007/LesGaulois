@@ -42,10 +42,6 @@ public class Romain {
 	public void sEquiper(Equipement equipement) {
 		String debutPhrase = "Le soldat ";
 		switch (nbEquipement) {
-		case 2: {
-			System.out.println(debutPhrase + nom + " est déjà bien protégé !");
-			break;
-		}
 		case 1: {
 			if (equipement.equals(equipements[0])) {
 				System.out.println(debutPhrase + nom + " possède déjà un " + equipement + " !");
@@ -63,7 +59,7 @@ public class Romain {
 			break;
 		}
 		default:
-			throw new IllegalArgumentException("Unexpected value: " + nbEquipement);
+			System.out.println(debutPhrase + nom + " est déjà bien protégé !");
 		}
 	}
 	
