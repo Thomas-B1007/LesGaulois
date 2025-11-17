@@ -7,6 +7,7 @@ public class Romain {
 	private int force;
 	private Equipement[] equipements = new Equipement[2];
 	private int nbEquipement = 0;
+	private String texte;
 	
 	public Romain(String nom, int force) {
 		this.nom = nom;
@@ -44,13 +45,13 @@ public class Romain {
 		forceCoup = CalculResistanceEquipement(forceCoup);
 		force -= forceCoup;
 		switch (force) {
-		case 0:
-			parler("Aïe");
-			break;
-		default:
-			equipementEjecte = ejecterEquipement();
-			parler("J'abandonne...");
-			break;
+			case 0:
+				parler("Aïe");
+				break;
+			default:
+				equipementEjecte = ejecterEquipement();
+				parler("J'abandonne...");
+				break;
 		}
 		return equipementEjecte;
 	}
